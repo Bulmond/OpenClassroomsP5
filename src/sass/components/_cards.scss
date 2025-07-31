@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+
+.kasa-card {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    h2 {
+        width: 280px;
+        position: absolute;
+        align-self: flex-end;
+        margin: 20px;
+        z-index: 1;
+        font: 700 18px $font-stack;
+        color: #fff;
+    }
+}
+
+.kasa-card-image {
+    width: 340px;
+    height: 340px;
+    background: $card-gradient;
+    border-radius: 10px;
+    img {
+        border-radius: 10px;
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+.kasa-card-wrapper {
+    padding: 56px 50px 43px;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    row-gap: 50px;
+    column-gap: 60px;
+    justify-content: center;
+    background-color: $grid-background-color;
+    border-radius: 25px;
+    position: relative;
+    z-index: -2;
+}

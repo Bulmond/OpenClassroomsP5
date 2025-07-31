@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.kasa-dropdown-wrapper {
+    margin: 0 108.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.kasa-dropdown-header {
+    background-color: $primary-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px 8px 20px;
+    h2 {
+        font: 700 24px $font-stack;
+        color: #fff;
+    }
+    span {
+        padding-top: 2px;
+        max-height: 32px;
+    }
+}
+
+.kasa-dropdown-item {
+    p {
+        font: 400 18px $font-stack;
+        padding: 25px 20px 20px 28px;
+    }
+}

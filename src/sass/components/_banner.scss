@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.kasa-banner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 223px;
+    h1 {
+        display: inline;
+        position: absolute;
+        font-size: 48px;
+        font-family: $font-stack;
+        font-weight: 700;
+        color: #fff;
+        z-index: 1;
+    }
+    img {
+        width: 100%;
+        height: 223px;
+        object-fit: cover;
+        position: relative;
+        border-radius: 25px;
+        z-index: -1;
+    }
+}
+
+.kasa-banner {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 223px;
+    width: 100%;
+    border-radius: 25px;
+}

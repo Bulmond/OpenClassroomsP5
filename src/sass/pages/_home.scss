@@ -1,3 +1,12 @@
-header, main{
+@use "../abstracts/" as *;
+
+header {
     padding: 45px 100px 0;
+}
+
+main {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
