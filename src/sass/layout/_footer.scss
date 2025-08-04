@@ -7,7 +7,8 @@ footer {
     align-items: center;
     gap: 1.5rem;
     justify-content: center;
-    height: 209px;
+    min-height: 209px;
+    margin-top: auto;
     img {
         max-width: 122px;
     }

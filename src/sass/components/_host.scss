@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.kasa-rental-host {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 10px;
+    img {
+        object-fit: cover;
+        width: 64px;
+        height: 64px;
+        border-radius: 64px;
+    }
+    span {
+        font: 500 18px $font-stack;
+        color: $primary-color;
+        display: block;
+        width: min-content;
+        align-self: center;
+    }
+}

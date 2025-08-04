@@ -1,0 +1,10 @@
+.kasa-rental-page {
+    padding: 50px 100px;
+}
+.kasa-rental-content {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 25px;
+}

@@ -6,7 +6,7 @@ import Dropdown from "../components/Dropdown";
 
 const About = () => {
     return (
-        <main>
+        <main className="kasa-about-page">
             <Banner image={about} />
             <div className="kasa-dropdown-wrapper">
                 {dropdownList.map(({ id, title, content }) => (

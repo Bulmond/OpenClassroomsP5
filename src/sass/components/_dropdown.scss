@@ -30,3 +30,15 @@
         padding: 25px 20px 20px 28px;
     }
 }
+
+.kasa-rental-content {
+    .kasa-dropdown-item {
+        max-width: 582px;
+    }
+    .kasa-dropdown-header {
+        max-width: 582px;
+    }
+    h2 {
+        font: 700 18px $font-stack;
+    }
+}

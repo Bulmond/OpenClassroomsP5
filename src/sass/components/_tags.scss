@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.kasa-tags {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+    min-height: 25px;
+    span {
+        font: 700 14px $font-stack;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        max-height: 25px;
+        width: 115px;
+        border-radius: 10px;
+    }
+}

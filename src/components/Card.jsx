@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
 import "../sass/components/_cards.scss";
 
-const Card = ({ rentals }) => {
+const Card = ({ rentalList }) => {
     return (
         <div className="kasa-card-wrapper">
-            {rentals.map(({ id, title, cover }) => (
-                <div key={id} className="kasa-card">
-                    <h2>{title}</h2>
-                    <div className="kasa-card-image">
-                        <img src={cover} alt={title} />
+            {rentalList.map(({ id, title, cover }) => (
+                <Link key={id} to={`/logement/${id}`}>
+                    <div className="kasa-card">
+                        <h2>{title}</h2>
+                        <div className="kasa-card-image">
+                            <img src={cover} alt={title} />
+                        </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

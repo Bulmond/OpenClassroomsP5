@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.kasa-rental-title {
+    h1 {
+        font: 500 36px $font-stack;
+        color: $primary-color;
+    }
+    span {
+        font: 500 18px $font-stack;
+    }
+}
