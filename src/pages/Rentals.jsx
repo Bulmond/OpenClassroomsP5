@@ -31,6 +31,8 @@ const Rentals = ({ rentalList }) => {
                         <Host host={host} />
                         <Tags tags={tags} />
                         <Ratings rating={rating} />
+                    </div>
+                    <div className="kasa-rental-dropdown">
                         <Dropdown title={"Description"} content={description} />
                         <Dropdown
                             title={"Équipements"}

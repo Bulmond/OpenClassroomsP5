@@ -34,6 +34,7 @@ const Router = () => {
                     element={<Rentals rentalList={rentals} />}
                 />
                 <Route path="*" element={<Error />} />
+                <Route path="/logement/*" element={<Error />} />
             </Routes>
             <Footer />
         </BrowserRouter>

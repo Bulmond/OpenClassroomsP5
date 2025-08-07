@@ -28,17 +28,21 @@
     p {
         font: 400 18px $font-stack;
         padding: 25px 20px 20px 28px;
+        background-color: $grid-background-color;
     }
 }
 
-.kasa-rental-content {
-    .kasa-dropdown-item {
-        max-width: 582px;
-    }
-    .kasa-dropdown-header {
-        max-width: 582px;
-    }
+.kasa-rental-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 76px;
+    margin-top: 24px;
     h2 {
         font: 700 18px $font-stack;
+    }
+    ul {
+        background-color: $grid-background-color;
+        font: 400 18px $font-stack;
+        padding: 16px 20px 20px ;
     }
 }
