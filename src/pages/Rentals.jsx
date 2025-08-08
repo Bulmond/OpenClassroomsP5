@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Carousel from "../components/rental/Carousel";
 import RentalTitle from "../components/rental/RentalTitle";
 import "../sass/pages/_rental.scss";
@@ -6,11 +6,21 @@ import Host from "../components/rental/Host";
 import Tags from "../components/rental/Tags";
 import Ratings from "../components/rental/Ratings";
 import Dropdown from "../components/Dropdown";
+import { useEffect } from "react";
 
 const Rentals = ({ rentalList }) => {
     const { rentalId } = useParams();
+    let navigate = useNavigate();
     const currentRental =
-        rentalList && rentalList.filter((rental) => rental.id === rentalId);
+        rentalList && rentalList.filter((rental) => rentalId === rental.id);
+    useEffect(() => {
+        if (
+            rentalList &&
+            !rentalList.some((rental) => rental.id === rentalId)
+        ) {
+            navigate("/*");
+        }
+    }, [rentalList, rentalId, navigate]);
     return (
         currentRental &&
         currentRental.map(
