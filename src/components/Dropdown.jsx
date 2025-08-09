@@ -5,7 +5,7 @@ import close from "../assets/arrow-closed-24px.svg";
 const Dropdown = ({ title, content, type }) => {
     const [isOpen, setIsOpen] = useState(false);
     const isList = type ? (
-        <div className="kasa-dropdown-item-2">
+        <div className="kasa-dropdown-item">
             <div className="kasa-dropdown-header">
                 <h2>{title}</h2>
                 <span onClick={() => setIsOpen(false)}>

@@ -10,18 +10,15 @@ const Carousel = ({ pictures }) => {
     const next = () => setCurr(curr === pictures.length - 1 ? 0 : curr + 1);
     return (
         <div className="kasa-carousel">
-            {pictures.map((pic, i) => (
-                <img
-                    key={Math.random()}
-                    src={pic}
-                    alt=""
-                    className={
-                        curr === i
-                            ? "kasa-carousel-image"
-                            : "kasa-carousel-image kasa-carousel-hidden"
-                    }
-                />
-            ))}
+            <div className="kasa-carousel-items" style={{transform: `translateX(-${curr * 100}%)`}}>
+                {pictures.map((pic) => (
+                    <img
+                        key={Math.random()}
+                        src={pic}
+                        alt=""
+                    />
+                ))}
+            </div>
             <div className="kasa-carousel-nav">
                 <button onClick={prev} className="prev">
                     <img src={arrowPrev} alt="" />
