@@ -1,9 +1,38 @@
 import "../../sass/components/_carousel.scss";
+import arrowNext from "../../assets/carousel-next.svg";
+import arrowPrev from "../../assets/carousel-prev.svg";
+import { useState } from "react";
 
 const Carousel = ({ pictures }) => {
+    const [curr, setCurr] = useState(0);
+    const prev = () =>
+        setCurr((curr) => (curr === 0 ? pictures.length - 1 : curr - 1));
+    const next = () => setCurr(curr === pictures.length - 1 ? 0 : curr + 1);
     return (
-        <div key={Math.random()} className="kasa-carousel">
-            <img src={pictures[0]} alt="" />
+        <div className="kasa-carousel">
+            {pictures.map((pic, i) => (
+                <img
+                    key={Math.random()}
+                    src={pic}
+                    alt=""
+                    className={
+                        curr === i
+                            ? "kasa-carousel-image"
+                            : "kasa-carousel-image kasa-carousel-hidden"
+                    }
+                />
+            ))}
+            <div className="kasa-carousel-nav">
+                <button onClick={prev} className="prev">
+                    <img src={arrowPrev} alt="" />
+                </button>
+                <button onClick={next} className="next">
+                    <img src={arrowNext} alt="" />
+                </button>
+            </div>
+            <span>
+                {curr + 1}/{pictures.length}
+            </span>
         </div>
     );
 };
