@@ -10,7 +10,9 @@ const About = () => {
             <Banner image={about} />
             <div className="kasa-dropdown-wrapper">
                 {dropdownList.map(({ id, title, content }) => (
-                    <Dropdown key={id} title={title} content={content} />
+                    <Dropdown key={id} title={title}>
+                        <p>{content}</p>
+                    </Dropdown>
                 ))}
             </div>
         </main>

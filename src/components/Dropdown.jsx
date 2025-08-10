@@ -2,43 +2,25 @@ import { useState } from "react";
 import open from "../assets/arrow-opened-24px.svg";
 import close from "../assets/arrow-closed-24px.svg";
 
-const Dropdown = ({ title, content, type }) => {
+const Dropdown = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const isList = type ? (
-        <div className="kasa-dropdown-item">
+
+    return (
+        <div
+            className={`${
+                isOpen ? "kasa-dropdown-item" : "kasa-dropdown-item-hidden"
+            }`}
+        >
             <div className="kasa-dropdown-header">
-                <h2>{title}</h2>
-                <span onClick={() => setIsOpen(false)}>
-                    <img src={close} alt="closed arrow button" />
+                <h2>{props.title}</h2>
+                <span onClick={() => setIsOpen(!isOpen)}>
+                    <img
+                        src={isOpen ? open : close}
+                        alt="closed arrow button"
+                    />
                 </span>
             </div>
-            <ul>
-                {content.map((element) => (
-                    <li key={`equip-${element}`}>{element}</li>
-                ))}
-            </ul>
-        </div>
-    ) : (
-        <div className="kasa-dropdown-item">
-            <div className="kasa-dropdown-header">
-                <h2>{title}</h2>
-                <span onClick={() => setIsOpen(false)}>
-                    <img src={close} alt="closed arrow button" />
-                </span>
-            </div>
-            <p>{content}</p>
-        </div>
-    );
-    return isOpen ? (
-        isList
-    ) : (
-        <div className="kasa-dropdown-item">
-            <div className="kasa-dropdown-header">
-                <h2>{title}</h2>
-                <span onClick={() => setIsOpen(true)}>
-                    <img src={open} alt="opened arrow button" />
-                </span>
-            </div>
+            {props.children}
         </div>
     );
 };

@@ -25,10 +25,40 @@
 }
 
 .kasa-dropdown-item {
-    p {
+    display: flex;
+    flex-direction: column;
+    transition: height 500ms, opacity 400ms;
+    height: 100%;
+    .kasa-dropdown-children {
+        display: flex;
+        flex-direction: column;
+        font: 400 18px $font-stack;
+        padding: 16px 20px 20px;
+        background-color: $grid-background-color;
+        border-radius: 5px;
+        height: 100%;
+        transition: height 500ms, opacity 400ms;
+    }
+    h2 {
+        font: 700 18px $font-stack;
+    }
+}
+
+.kasa-dropdown-item-hidden {
+    display: flex;
+    flex-direction: column;
+    transition: height 500ms, opacity 400ms;
+    height: 52px;
+    overflow: hidden;
+    .kasa-dropdown-children {
         font: 400 18px $font-stack;
         padding: 25px 20px 20px 28px;
         background-color: $grid-background-color;
+        border-radius: 5px;
+        transition: height 500ms ease-out, opacity 400ms;
+    }
+    h2 {
+        font: 700 18px $font-stack;
     }
 }
 
@@ -37,12 +67,4 @@
     grid-template-columns: 1fr 1fr;
     gap: 76px;
     margin-top: 24px;
-    h2 {
-        font: 700 18px $font-stack;
-    }
-    ul {
-        background-color: $grid-background-color;
-        font: 400 18px $font-stack;
-        padding: 16px 20px 20px ;
-    }
 }

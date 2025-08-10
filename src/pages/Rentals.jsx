@@ -43,12 +43,18 @@ const Rentals = ({ rentalList }) => {
                         <Ratings rating={rating} />
                     </div>
                     <div className="kasa-rental-dropdown">
-                        <Dropdown title={"Description"} content={description} />
-                        <Dropdown
-                            title={"Équipements"}
-                            content={equipments}
-                            type={"obj"}
-                        />
+                        <Dropdown title={"Description"}>
+                            <p className="kasa-dropdown-children">
+                                {description}
+                            </p>
+                        </Dropdown>
+                        <Dropdown title={"Équipements"}>
+                            <ul className="kasa-dropdown-children">
+                                {equipments.map((element) => (
+                                    <li key={`equip-${element}`}>{element}</li>
+                                ))}
+                            </ul>
+                        </Dropdown>
                     </div>
                 </main>
             )
