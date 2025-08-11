@@ -1,6 +1,5 @@
 import { useState } from "react";
-import open from "../assets/arrow-opened-24px.svg";
-import close from "../assets/arrow-closed-24px.svg";
+import arrowIcon from "../assets/arrow-opened-24px.svg";
 
 const Dropdown = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +14,14 @@ const Dropdown = (props) => {
                 <h2>{props.title}</h2>
                 <span onClick={() => setIsOpen(!isOpen)}>
                     <img
-                        src={isOpen ? open : close}
-                        alt="closed arrow button"
+                        src={arrowIcon}
+                        alt={
+                            isOpen ? "open arrow button" : "closed arrow button"
+                        }
                     />
                 </span>
             </div>
-            {props.children}
+            <div className="kasa-dropdown-children">{props.children}</div>
         </div>
     );
 };

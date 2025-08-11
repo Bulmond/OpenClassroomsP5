@@ -44,12 +44,10 @@ const Rentals = ({ rentalList }) => {
                     </div>
                     <div className="kasa-rental-dropdown">
                         <Dropdown title={"Description"}>
-                            <p className="kasa-dropdown-children">
-                                {description}
-                            </p>
+                            <p>{description}</p>
                         </Dropdown>
                         <Dropdown title={"Équipements"}>
-                            <ul className="kasa-dropdown-children">
+                            <ul>
                                 {equipments.map((element) => (
                                     <li key={`equip-${element}`}>{element}</li>
                                 ))}

@@ -7,11 +7,24 @@
         gap: 57px;
         margin-left: auto;
         padding: 17px;
-        font: 24px $font-stack;
+        font: 500 24px $font-stack;
     }
     a {
         align-self: center;
         text-decoration: none;
         color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    .kasa-header {
+        img {
+            width: 145px;
+        }
+        nav {
+            gap: 27px;
+            font: 500 12px $font-stack;
+            padding: 0;
+        }
     }
 }

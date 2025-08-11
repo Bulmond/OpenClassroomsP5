@@ -42,3 +42,12 @@
     position: relative;
     z-index: 0;
 }
+
+@media (max-width: 768px) {
+    .kasa-card-wrapper {
+        grid-template-columns: 1fr;
+        background-color: #fff;
+        padding: 0;
+        row-gap: 20px;
+    }
+}

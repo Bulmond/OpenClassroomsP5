@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .kasa-dropdown-wrapper {
-    margin: 0 108.5px;
+    margin: 38px 108.5px 0;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -27,38 +27,38 @@
 .kasa-dropdown-item {
     display: flex;
     flex-direction: column;
-    transition: height 500ms, opacity 400ms;
-    height: 100%;
+    transition: max-height 500ms ease-out, opacity 400ms;
+    max-height: 300px;
     .kasa-dropdown-children {
-        display: flex;
-        flex-direction: column;
         font: 400 18px $font-stack;
+        line-height: 143%;
         padding: 16px 20px 20px;
         background-color: $grid-background-color;
         border-radius: 5px;
         height: 100%;
-        transition: height 500ms, opacity 400ms;
     }
-    h2 {
-        font: 700 18px $font-stack;
+    img {
+        transition: all 200ms;
     }
 }
 
 .kasa-dropdown-item-hidden {
     display: flex;
     flex-direction: column;
-    transition: height 500ms, opacity 400ms;
-    height: 52px;
+    transition: max-height 500ms ease-out, opacity 400ms;
+    max-height: 54px;
     overflow: hidden;
     .kasa-dropdown-children {
         font: 400 18px $font-stack;
+        line-height: 143%;
         padding: 25px 20px 20px 28px;
         background-color: $grid-background-color;
         border-radius: 5px;
-        transition: height 500ms ease-out, opacity 400ms;
     }
-    h2 {
-        font: 700 18px $font-stack;
+
+    img {
+        transition: all 200ms;
+        transform: rotate(180deg);
     }
 }
 
@@ -67,4 +67,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 76px;
     margin-top: 24px;
+    h2 {
+        font: 700 18px $font-stack;
+    }
 }
