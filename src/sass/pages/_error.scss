@@ -22,3 +22,20 @@
         text-decoration: underline;
     }
 }
+
+@media (max-width: 768px) {
+    .kasa-error-page {
+        padding: 113px 57.5px;
+        gap: 113px;
+        h1 {
+            font-size: 96px;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+        a {
+            font-size: 14px;
+        }
+    }
+}
