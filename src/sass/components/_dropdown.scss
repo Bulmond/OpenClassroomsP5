@@ -113,4 +113,11 @@
             height: 100%;
         }
     }
+    .kasa-rental-dropdown {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        img {
+            height: 15px;
+        }
+    }
 }

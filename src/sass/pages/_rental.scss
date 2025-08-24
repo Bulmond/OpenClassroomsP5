@@ -4,6 +4,21 @@
 .kasa-rental-content {
     padding-top: 25px;
     display: grid;
+    grid-template-areas:
+        "title host"
+        "tags ratings";
     grid-template-columns: 1fr 1fr;
     row-gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .kasa-rental-page {
+        padding: 27px 20px;
+    }
+    .kasa-rental-content {
+        grid-template-areas:
+            "title title"
+            "tags tags"
+            "ratings host";
+    }
 }

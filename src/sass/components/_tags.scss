@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 .kasa-tags {
+    grid-area: tags;
     display: flex;
     align-self: center;
     gap: 10px;
@@ -15,5 +16,15 @@
         max-height: 25px;
         padding: 0 15px;
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kasa-tags {
+        min-height: 18px;
+        span {
+            padding: 1px 15px 0;
+            font-size: 10px;
+        }
     }
 }

@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 .kasa-rental-host {
+    grid-area: host;
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -17,5 +18,17 @@
         display: block;
         width: min-content;
         align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .kasa-rental-host {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+        span {
+            font-size: 12px;
+        }
     }
 }

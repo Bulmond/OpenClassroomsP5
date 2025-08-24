@@ -1,11 +1,23 @@
 @use "../abstracts/" as *;
 
 .kasa-rental-title {
+    grid-area: title;
     h1 {
         font: 500 36px $font-stack;
         color: $primary-color;
     }
     span {
         font: 500 18px $font-stack;
+    }
+}
+
+@media (max-width: 768px) {
+    .kasa-rental-title {
+        h1 {
+            font-size: 18px;
+        }
+        span {
+            font-size: 14px;
+        }
     }
 }

@@ -1,3 +1,15 @@
 .kasa-rating {
+    grid-area: ratings;
     margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .kasa-rating {
+        margin: 0;
+        height: 18px;
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
 }
