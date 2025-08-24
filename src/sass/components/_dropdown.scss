@@ -71,3 +71,46 @@
         font: 700 18px $font-stack;
     }
 }
+
+@media (max-width: 768px) {
+    .kasa-dropdown-wrapper {
+        height: 100%;
+        gap: 20px;
+        width: 100%;
+        margin: 19px 0 0 0;
+        img {
+            height: 15px;
+        }
+    }
+    .kasa-dropdown-item-hidden {
+        max-height: 30px;
+        .kasa-dropdown-children {
+            font: 400 12px $font-stack;
+            line-height: 143%;
+            padding: 13px 20px 19px;
+            background-color: $grid-background-color;
+            border-radius: 5px;
+            height: 100%;
+        }
+    }
+    .kasa-dropdown-header {
+        max-height: 30px;
+        padding: 7.5px 10px;
+        h2 {
+            font: 700 13px $font-stack;
+        }
+        span {
+            height: 12px;
+        }
+    }
+    .kasa-dropdown-item {
+        .kasa-dropdown-children {
+            font: 400 12px $font-stack;
+            line-height: 143%;
+            padding: 13px 20px 19px;
+            background-color: $grid-background-color;
+            border-radius: 5px;
+            height: 100%;
+        }
+    }
+}

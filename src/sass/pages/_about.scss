@@ -3,3 +3,12 @@
 .kasa-about-page {
     padding: 38px 100px;
 }
+
+@media (max-width: 768px) {
+    .kasa-about-page {
+        display: flex;
+        flex-direction: column;
+        padding: 19px 20px;
+        height: 100%;
+    }
+}
