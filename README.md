@@ -34,7 +34,7 @@ To clone and start the project locally, follow the steps below:
 
     ```bash
     git clone https://github.com/Bulmond/OpenClassroomsP5.git
-    cd Kasa-Front-End-Redesign
+    cd OpenClassroomsP5
     ```
 
 2.  **Install Dependencies**
