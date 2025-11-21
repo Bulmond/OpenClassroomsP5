@@ -33,7 +33,7 @@ To clone and start the project locally, follow the steps below:
 1.  **Clone the Repository**
 
     ```bash
-    git clone [REPO_URL]
+    git clone https://github.com/Bulmond/OpenClassroomsP5.git
     cd Kasa-Front-End-Redesign
     ```
 
